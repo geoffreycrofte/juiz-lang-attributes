@@ -1,0 +1,51 @@
+/**
+ * Editor Styles
+ */
+body#tinymce.wp-editor [lang],
+body#tinymce.wp-editor [hreflang] {
+	position: relative;
+	border-radius: 4px;
+}
+
+body#tinymce.wp-editor [hreflang] {
+	outline: 2px dashed #AAA;
+}
+
+body#tinymce.wp-editor [lang] {
+	outline: 2px dotted #AAA;
+}
+
+body#tinymce.wp-editor [hreflang]:before,
+body#tinymce.wp-editor [lang]:after {
+	position: absolute;
+	top: 0;
+	padding: 2px 4px 1px;
+	font-size: 8px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #FFF;
+	background: #666;
+	font-family: sans-serif;
+	transform: translateY(-80%);
+	opacity: 0;
+	border-radius: 2px 2px 0 0;
+	transition: all .275s;
+}
+
+body#tinymce.wp-editor [hreflang]:hover:before,
+body#tinymce.wp-editor [lang]:hover:after,
+body#tinymce.wp-editor [hreflang]:focus:before,
+body#tinymce.wp-editor [lang]:focus:after {
+	opacity: 1;
+	transform: translateY(-100%);
+}
+
+body#tinymce.wp-editor [lang]:after {
+	content: 'L: ' attr(lang);
+	right: 0;
+}
+
+body#tinymce.wp-editor [hreflang]:before {
+	content: 'H: ' attr(hreflang);
+	left: 0;
+}
