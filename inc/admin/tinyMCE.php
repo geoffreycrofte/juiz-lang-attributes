@@ -22,7 +22,7 @@ add_filter( 'mce_buttons', 'juizl_register_buttons' );
  * @return (array)               The array with the new plugin.
  */
 function juizl_register_tinymce_javascript( $plugin_array ) {
-   $plugin_array['juizl'] = JUIZL_PLUGIN_URL . '/assets/js/juizl-plugin.js';
+   $plugin_array['juizl'] = JUIZL_PLUGIN_URL . '/assets/js/juizl-tinymce-plugin.js';
    return $plugin_array;
 }
 add_filter( 'mce_external_plugins', 'juizl_register_tinymce_javascript' );

@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=P39NJ
 Tags: lang, hreflang, alternate, attribute, SEO, accessibility, translation
 Requires at least: 4.5
 Tested up to: 5.1.1
-Stable tag: 1.0.2
+Stable tag: 1.1.0
 
 Add a custom HREFLANG meta box on your post to manually edit the link between your post and a translation (which could be outside your domain). Also add the `lang` and `hreflang` attributes to the TinyMCE editor.
 
@@ -71,6 +71,10 @@ Thanks.
 
 == Changelog ==
 
+= 1.1.0 =
+* Feature: Gutenberg Editor Support
+* Cleaning-up: Useless files removed.
+
 = 1.0.2 =
 * Improvement: Show the attributes in the editor while hovering or focusing them. (when the element is focusable)
 
@@ -81,4 +85,4 @@ Thanks.
 
 
 = 1.0.0 =
-Try it ;)
+* Initial: Try it ;)

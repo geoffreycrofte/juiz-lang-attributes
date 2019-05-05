@@ -2,7 +2,8 @@
  * Editor Styles
  */
 body#tinymce.wp-editor [lang],
-body#tinymce.wp-editor [hreflang] {
+body#tinymce.wp-editor [hreflang],
+.editor-writing-flow [lang] {
 	position: relative;
 	border-radius: 4px;
 }
@@ -11,12 +12,14 @@ body#tinymce.wp-editor [hreflang] {
 	outline: 2px dashed #AAA;
 }
 
-body#tinymce.wp-editor [lang] {
+body#tinymce.wp-editor [lang],
+.editor-writing-flow [lang] {
 	outline: 2px dotted #AAA;
 }
 
 body#tinymce.wp-editor [hreflang]:before,
-body#tinymce.wp-editor [lang]:after {
+body#tinymce.wp-editor [lang]:after,
+.editor-writing-flow [lang]:after {
 	position: absolute;
 	top: 0;
 	padding: 2px 4px 1px;
@@ -34,13 +37,16 @@ body#tinymce.wp-editor [lang]:after {
 
 body#tinymce.wp-editor [hreflang]:hover:before,
 body#tinymce.wp-editor [lang]:hover:after,
+.editor-writing-flow [lang]:hover:after,
 body#tinymce.wp-editor [hreflang]:focus:before,
-body#tinymce.wp-editor [lang]:focus:after {
+body#tinymce.wp-editor [lang]:focus:after,
+.editor-writing-flow [lang]:focus:after {
 	opacity: 1;
 	transform: translateY(-100%);
 }
 
-body#tinymce.wp-editor [lang]:after {
+body#tinymce.wp-editor [lang]:after,
+.editor-writing-flow [lang]:after {
 	content: 'L: ' attr(lang);
 	right: 0;
 }

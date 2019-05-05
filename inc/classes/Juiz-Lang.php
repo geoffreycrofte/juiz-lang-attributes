@@ -82,7 +82,14 @@ class Juiz_Lang {
 
 		require_once( JUIZL_DIRNAME . '/inc/admin/custom-meta-boxes.php' );
 		require_once( JUIZL_DIRNAME . '/inc/admin/enqueues.php' );
-		require_once( JUIZL_DIRNAME . '/inc/admin/tinyMCE.php' );
+
+		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+		if ( function_exists( 'register_block_type' ) && ! is_plugin_active('classic-editor/classic-editor.php') ) {
+			require_once( JUIZL_DIRNAME . '/inc/admin/gutenberg.php' );
+		} else {
+			require_once( JUIZL_DIRNAME . '/inc/admin/tinyMCE.php' );
+		}
 
 		do_action( 'juizl_after_includes_admin' );
 	}
