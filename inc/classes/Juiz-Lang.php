@@ -53,18 +53,6 @@ class Juiz_Lang {
 	 */
 	public function install() {
 		$juizl_options = juizl_get_options();
-
-		/*if (
-			! isset( $juizl_options['list_page'] )
-			||
-			( isset( $juizl_options['list_page'] ) && ! get_post( $juizl_options['list_page'] ) )
-		) {
-			$talks_page = wp_insert_post( juizl_get_my_talks_page_args(), true );
-
-			if ( ! is_wp_error( $talks_page ) ) {
-				juizl_update_option( 'list_page', (int) $talks_page );
-			}
-		}*/
 	}
 
 	/**
@@ -77,7 +65,6 @@ class Juiz_Lang {
 	public function includes() {
 		do_action( 'juizl_before_includes' );
 
-		require_once( JUIZL_DIRNAME . '/inc/functions/options.php' );
 		require_once( JUIZL_DIRNAME . '/inc/functions/sanitize.php' );
 
 		do_action( 'juizl_after_includes' );
@@ -93,7 +80,6 @@ class Juiz_Lang {
 	public function includes_admin() {
 		do_action( 'juizl_before_includes_admin' );
 
-		require_once( JUIZL_DIRNAME . '/inc/admin/menus.php' );
 		require_once( JUIZL_DIRNAME . '/inc/admin/custom-meta-boxes.php' );
 		require_once( JUIZL_DIRNAME . '/inc/admin/enqueues.php' );
 		require_once( JUIZL_DIRNAME . '/inc/admin/tinyMCE.php' );
