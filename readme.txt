@@ -72,7 +72,7 @@ Thanks.
 == Changelog ==
 
 = 1.1.0 =
-* Feature: Gutenberg Editor Support
+* Feature: Gutenberg Editor Support for lang attribute.
 * Cleaning-up: Useless files removed.
 
 = 1.0.2 =
