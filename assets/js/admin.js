@@ -74,44 +74,4 @@
 		return false;
 	} );
 
-	/**
-	 * AJAX Actions on some buttons.
-	 */
-	$( '.juizl-button[data-ajax-action]' ).on( 'click.juizl', function() {
-		var $_this = $(this),
-			action = $_this.data( 'ajax-action' );
-
-		$_this.addClass( 'juizl-loading' );
-
-		$.post(
-			ajaxurl,
-			{ action: action, _wpnonce: $_this.data( 'nonce' ) }
-		).done( function( data ) {
-			
-			$_this.removeClass( 'juizl-loading' );
-			$_this.next( '.juizl-success, .juizl-error' ).remove();
-
-			if ( data.success === true ) {
-				$_this.after( '<p class="juizl-success">' + data.data.message + '</p>' );
-				$_this.trigger( 'juizl-success', data.data );
-			} else {
-				$_this.after( '<p class="juizl-error">' + data.data.message + '</p>' );
-				$_this.trigger( 'juizl-error', data.data );
-			}
-		});
-
-		return false;
-	} )
-
-	// AJAX Actions on specific buttons.
-	.on( 'juizl-success', function( e, data ) {
-		var action = $( e.target ).data('ajax-action');
-
-		if ( action === 'juizl_create_default_page' ) {
-			var $select = $( '#juizl-list-page' );
-			$select.find( 'option[selected]' ).removeAttr( 'selected' );
-			$select.append( '<option value="' + data.item_id + '" selected="selected">' + data.item_title + '</option>' );
-		}
-	} );
-
 } )( jQuery, window, document );

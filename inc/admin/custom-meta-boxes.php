@@ -56,11 +56,11 @@ function juizl_hreflang_mb( $post ) {
 	$output .= '<p class="juizl-mb-line juizl-inlined-inputs' . ( $c === $i || $c === 0 ? ' juizl-to-duplicate' : '' ) . '">
 			<span class="juizl-small-col">
 				<label for="juizl-hreflang-code-' . $i . '">' . __( 'Language Code', 'juiz-lang' ) . $doclink . '</label><br>
-				<input type="text" name="juizl-hreflang[code][]" id="juizl-hreflang-code-' . $i . '" value="' . ( $c > 0 && isset( $juizl_hreflangs['code'][0] ) ? $juizl_hreflangs['code'][0] : '' ) . '" />
+				<input type="text" name="juizl-hreflang[code][]" id="juizl-hreflang-code-' . $i . '" value="' . ( $c > 0 && isset( $juizl_hreflangs['code'][0] ) ? esc_attr( $juizl_hreflangs['code'][0] ) : '' ) . '" />
 			</span>
 			<span class="juizl-big-col">
 				<label for="juizl-hreflang-href-' . $i . '">' . __( 'URL', 'juiz-lang' ) . '</label><br>
-				<input type="url" name="juizl-hreflang[href][]" id="juizl-hreflang-href-' . $i . '" value="' . ( $c > 0 && isset( $juizl_hreflangs['href'][0] ) ? $juizl_hreflangs['href'][0] : '' ) . '" />
+				<input type="url" name="juizl-hreflang[href][]" id="juizl-hreflang-href-' . $i . '" value="' . ( $c > 0 && isset( $juizl_hreflangs['href'][0] ) ? esc_attr( $juizl_hreflangs['href'][0] ) : '' ) . '" />
 			</span>
 			<span class="juizl-remove-link">' . ( $c > 1 ? $delbtn : '' ) . '</span>
 	</p>';
