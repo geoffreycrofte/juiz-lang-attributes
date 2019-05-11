@@ -71,6 +71,7 @@ Thanks.
 
 ### 1.1.1
 * **Bug**: Fix fatal error on first installation.
+* **Security**: Fix XSS Issue. (Thank you [Julio Potier](https://boiteaweb.fr/) - [SecuPress](https://secupress.me))
 
 ### 1.1.0
 * **Feature:** Gutenberg Editor Support for lang attribute.

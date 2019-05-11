@@ -1,0 +1,160 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Juiz Lang Attributes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-12 01:06+0200\n"
+"PO-Revision-Date: 2019-05-12 01:14+0200\n"
+"Last-Translator: \n"
+"Language-Team: Creativejuiz <support@creativejuiz.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;esc_html__;"
+"esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+
+#: inc/admin/custom-meta-boxes.php:19
+msgid "Custom HREFLANG"
+msgstr "HREFLANG Personnalisé"
+
+#: inc/admin/custom-meta-boxes.php:42
+#, php-format
+msgid ""
+"You can provide alternate URL to Google if your content is translated "
+"somewhere in the Web. Fill code with 2-letters (%s for English) code or 4-"
+"letters (%s for English in United State) code if you specify the region."
+msgstr ""
+"Vous pouvez fournir une URL alternative à Google si vous contenu est "
+"traduit quelque part sur le Web. Remplissez le champ code avec le format "
+"2 lettres (%s pour l’anglais) ou 4 lettres (%s pour l’anglais au États-"
+"Unis) si vous spécifiez la région."
+
+#: inc/admin/custom-meta-boxes.php:47
+msgid "Remove this link"
+msgstr "Retirer le lien"
+
+#: inc/admin/custom-meta-boxes.php:58 inc/admin/custom-meta-boxes.php:79
+msgid "Language Code"
+msgstr "Code de langue"
+
+#: inc/admin/custom-meta-boxes.php:62 inc/admin/custom-meta-boxes.php:83
+msgid "URL"
+msgstr "URL"
+
+#: inc/admin/custom-meta-boxes.php:95
+#, php-format
+msgid ""
+"Keep in mind that if you use a plugin to translate your content, the %1$s "
+"attributes may already exist (automatically generated between you own "
+"contents). If you need to link to an external website, make sure this "
+"website also filled the right %1$s to your website. For more information: "
+"%2$sGoogle about localized pages%3$s"
+msgstr ""
+"Gardez à l’esprit que si vous utilisez un plugin pour traduire votre "
+"contenu, l’attribut %1$s pourrait déjà exister (automatiquement généré "
+"entre vos propres pages de contenu). Si vous avez besoin de faire un lien "
+"vers un site extérieur, soyez certain·e que ce site web renseigne le bon "
+"%1$s vers votre site web. Pour plus d’information : %2$sGoogle à propos "
+"de la localisation de pages%3$s"
+
+#: inc/admin/enqueues.php:19
+msgid "Add another one"
+msgstr "En ajouter un autre"
+
+#: inc/admin/enqueues.php:20
+msgid "Are you sure you want to remove this hreflang?"
+msgstr "Êtes-vous sûr·e de vouloir retirer ce HREFLANG ?"
+
+#~ msgid "Modern Style"
+#~ msgstr "Modern Style"
+
+#~ msgid "by"
+#~ msgstr "by"
+
+#~ msgid "Black"
+#~ msgstr "Black"
+
+#~ msgid "Share this article on Twitter"
+#~ msgstr "Share this article on Twitter"
+
+#~ msgid "Share this article on Facebook"
+#~ msgstr "Share this article on Facebook"
+
+#~ msgid "Share this article on Google+"
+#~ msgstr "Share this article on Google+"
+
+#~ msgid "Share this article on Viadeo"
+#~ msgstr "Share this article on Viadeo"
+
+#~ msgid "Share this article on LinkedIn"
+#~ msgstr "Share this article on LinkedIn"
+
+#~ msgid "Share this article on Digg"
+#~ msgstr "Share this article on Digg"
+
+#~ msgid "Share this article on StumbleUpon"
+#~ msgstr "Share this article on StumbleUpon"
+
+#~ msgid "Share this article on Weibo"
+#~ msgstr "Share this article on Weibo"
+
+#~ msgid "Share this article on VKontakte"
+#~ msgstr "Share this article on VKontakte"
+
+#~ msgid "Visit this link"
+#~ msgstr "Visit this link"
+
+#~ msgid "Hi, I found this information for you! Have a nice day :)"
+#~ msgstr "Hi, I found this information for you! Have a nice day :)"
+
+#~ msgid "adds a <code>target=\"_blank\"</code> attribute"
+#~ msgstr "adds a <code>target=\"_blank\"</code> attribute"
+
+#~ msgid "Howdy, %1$s"
+#~ msgstr "Howdy, %1$s"
+
+#~ msgid "Credits"
+#~ msgstr "Credits"
+
+#~ msgid ""
+#~ "Mobile Admin support by <a href=\"http://wordpress.org/extend/plugins/"
+#~ "juiz-smart-mobile-admin\">Juiz SMA</a>"
+#~ msgstr ""
+#~ "Mobile Admin support by <a href=\"http://wordpress.org/extend/plugins/"
+#~ "juiz-smart-mobile-admin\">Juiz SMA</a>"
+
+#~ msgid "Top of page"
+#~ msgstr "Top of page"
+
+#~ msgid "Admin Mobile Appearance"
+#~ msgstr "Admin Mobile Appearance"
+
+#~ msgid "Show plugins shortcuts in adminbar?"
+#~ msgstr "Show plugins shortcuts in adminbar?"
+
+#~ msgid "Show custom WP admin footer ?"
+#~ msgstr "Show custom WP admin footer ?"
+
+#~ msgid "Settings saved"
+#~ msgstr "Settings saved"
+
+#~ msgid "Manage Juiz Smart Mobile Admin"
+#~ msgstr "Manage Juiz Smart Mobile Admin"
+
+#~ msgid "The redirection failed"
+#~ msgstr "The redirection failed"
+
+#~ msgid "refresh the page"
+#~ msgstr "refresh the page"
+
+#~ msgid "Sorry, nothing to update..."
+#~ msgstr "Sorry, nothing to update..."
+
+#~ msgid "Unknown error..."
+#~ msgstr "Unknown error..."
