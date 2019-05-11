@@ -52,7 +52,7 @@ class Juiz_Lang {
 	 * @author Geoffrey Crofte
 	 */
 	public function install() {
-		$juizl_options = juizl_get_options();
+		// Do nothing for now.
 	}
 
 	/**
