@@ -54,13 +54,13 @@ It happens sometimes when you alreay have another plugin that does dirty things 
 For the moment I don't support Gutenberg editor. Working on a way to support it.
 Thanks.
 
-== Screenshots ==
+## Screenshots ==
 
 1. Metabox for post
 2. TinyMCE with new buttons
 3. Attributes well placed on your HTML
 
-== Other plugins ==
+## Other plugins ==
 
 * **<a href="http://wordpress.org/plugins/juiz-social-post-sharer/">Juiz Social Post Sharer</a>**: if you need social buttons.
 * **<a href="https://fr.wordpress.org/plugins/juiz-outdated-post-message/">Juiz Outdated Post Message</a>**: if you want to put a warning on old post on your blog.
