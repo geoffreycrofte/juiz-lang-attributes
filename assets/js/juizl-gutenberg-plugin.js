@@ -1,4 +1,5 @@
 ( function( wp ) {
+	var promptVals = {};
 
 	/**
 	 * Register LANG Attribute
@@ -20,7 +21,8 @@
 				onClick: function() {
 					var langVal = null,
 						value   = props.value,
-						selText = value.text.substring( value.start, value.end );
+						selText = value.text.substring( value.start, value.end ),
+						promptVal;
 
 					if ( 0 === selText.length && ! props.isActive ) {
 						alert('You need to select a text');
@@ -33,7 +35,12 @@
 						langVal = activeFormat.attributes.lang;
 					}
 
-					langVal = langVal ? langVal : prompt('What HREFLANG value?');
+					if ( ! langVal ) {
+						promptVal = prompt('What LANG value?',  promptVals.lang ? promptVals.lang : '');
+						promptVals.lang = promptVal;
+					}
+
+					langVal = langVal ? langVal : promptVal;
 
 					if ( langVal ) {
 						props.onChange( 

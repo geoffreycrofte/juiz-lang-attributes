@@ -5,7 +5,7 @@
 * **Tags:** lang, hreflang, alternate, attribute, SEO, accessibility, translation
 * **Requires at least:** WordPress 4.5
 * **Tested up to:** WordPress 5.1.1
-* **Stable tag:** 1.1.1
+* **Stable tag:** 1.1.2
 
 Add a custom HREFLANG meta box on your post to manually edit the link between your post and a translation (which could be outside your domain). Also add the `lang` and `hreflang` attributes to the TinyMCE editor.
 
@@ -68,6 +68,10 @@ Thanks.
 
 
 ## Changelog
+
+### 1.1.2
+* **Bug**: Fix JS Bug on TinyMCE Editor for both LANG and HREFLANG
+* **UX Improvement**: keep your last value for HREFLANG or LANG, saving time while editing long posts.
 
 ### 1.1.1
 * **Bug**: Fix fatal error on first installation.

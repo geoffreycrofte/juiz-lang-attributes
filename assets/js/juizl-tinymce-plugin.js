@@ -1,4 +1,6 @@
 (function() {
+	var promptVals = {};
+
 	tinymce.create('tinymce.plugins.Juizl', {
 		init : function(ed, url) {
 			ed.addButton('juizlangattr', {
@@ -18,7 +20,7 @@
 					return_text   = '';
 
 				// If element already have the attribute, remove it.
-				if ( selected_text.length === 0 && ed.selection.getNode().getAttribute('lang').length > 0 ) {
+				if ( selected_text.length === 0 && ed.selection.getNode().getAttribute('lang') ) {
 					ed.selection.getNode().removeAttribute('lang');
 					return;
 				}
@@ -31,10 +33,11 @@
 						alert( 'No element selected. Select some text.' );
 					}
 					
-					var attrValue = prompt( 'What LANG value to apply on <' + element.nodeName.toLowerCase() + '> element?' );
+					var attrValue = prompt( 'What LANG value to apply on <' + element.nodeName.toLowerCase() + '> element?', promptVals.lang ? promptVals.lang : '' );
 
 					if ( attrValue !== null ) {
 						element.setAttribute( 'lang', attrValue );
+						promptVals.lang = attrValue;
 					} else {
 						alert( 'Wrong value for LANG attribute.' );
 					}
@@ -42,10 +45,11 @@
 				}
 				// Else apply a SPAN wrapper with the attribute.
 				else {
-					var attrValue = prompt("What LANG value?");
+					var attrValue = prompt("What LANG value?", promptVals.lang ? promptVals.lang : '');
 
 					if ( attrValue !== null ) {
 						return_text = '<span lang="' + attrValue + '">' + selected_text + '</span>';
+						promptVals.lang = attrValue;
 						ed.execCommand('mceInsertContent', 0, return_text);
 					} else {
 						alert( 'Wrong value for LANG attribute.' );
@@ -59,16 +63,17 @@
 					element       = ed.selection.getNode();
 
 					// If element already have the attribute, remove it.
-					if ( selected_text.length === 0 && element.getAttribute('hreflang').length > 0 ) {
+					if ( selected_text.length === 0 && element.getAttribute('hreflang') ) {
 						ed.selection.getNode().removeAttribute('hreflang');
 						return;
 					}
 
 					// Apply the hreflang attribute only on anchors.
 					if ( element.nodeName === 'A') {
-						var attrValue = prompt( 'What HREFLANG value?' );
+						var attrValue = prompt( 'What HREFLANG value?', promptVals.hreflang ? promptVals.hreflang : '');
 						if (attrValue !== null) {
 							element.setAttribute( 'hreflang', attrValue );
+							promptVals.hreflang = attrValue;
 						} else {
 							alert( 'Wrong value for HREFLANG attribute.' );
 						}
