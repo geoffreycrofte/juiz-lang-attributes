@@ -74,4 +74,40 @@
 		return false;
 	} );
 
+	/**
+	 * Show/Hide Options in Menu Screen Prefs panel
+	 */
+	// Be sure we are on the Menu Page.
+	if ( $('.nav-menus-php #description-hide') ) {
+		var prefmarkup = '',
+			isChecked,
+			whatsvisible = {
+				'hreflang' : true,
+				'langattr' : true
+			};
+
+		if ( localStorage ) {
+			whatsvisible = JSON.parse( localStorage.getItem('juizlattrs') ) || whatsvisible;
+		}
+
+		$.each(whatsvisible, function(index){
+			isChecked = localStorage && whatsvisible ? ( whatsvisible[index] ? 'checked="checked"' : '' ) : 'checked="checked"';
+			prefmarkup += '<label>';
+			prefmarkup += '<input class="hide-column-tog" ';
+			prefmarkup += 'name="' + index + '-hide" type="checkbox" ';
+			prefmarkup += 'id="' + index + '-hide" value="' + index + '" ';
+			prefmarkup += isChecked + ' />';
+			prefmarkup += $('.field-' + index + ' .edit-menu-label').eq(0).text() + '</label>';
+
+			if ( localStorage ) {
+				$('#screen-options-wrap').on('change.juizl', '#' + index + '-hide', function(){
+					whatsvisible[this.value] = this.checked;
+					localStorage.setItem('juizlattrs', JSON.stringify( whatsvisible ) );
+				});
+			}
+		});
+
+		$('#description-hide').closest('label').after(prefmarkup);
+	}
+
 } )( jQuery, window, document );

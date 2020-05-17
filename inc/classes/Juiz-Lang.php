@@ -81,6 +81,7 @@ class Juiz_Lang {
 		do_action( 'juizl_before_includes_admin' );
 
 		require_once( JUIZL_DIRNAME . '/inc/admin/custom-meta-boxes.php' );
+		require_once( JUIZL_DIRNAME . '/inc/admin/custom-menu-fields.php' );
 		require_once( JUIZL_DIRNAME . '/inc/admin/enqueues.php' );
 
 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -105,6 +106,7 @@ class Juiz_Lang {
 		do_action( 'juizl_before_includes_front' );
 
 		require_once( JUIZL_DIRNAME . '/inc/front/wp-head.php' );
+		require_once( JUIZL_DIRNAME . '/inc/front/nav-menu-link-attributes.php');
 
 		do_action( 'juizl_after_includes_front' );
 	}
