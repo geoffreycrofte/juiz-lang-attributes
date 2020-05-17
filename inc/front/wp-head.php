@@ -17,11 +17,13 @@ function juiz_lang_wp_head() {
 
 	$juizl_meta = get_post_meta( $post->ID, '_juizl-hreflang', true );
 
-	if ( ! $juizl_meta ) {
+	if ( ! $juizl_meta || ( is_array( $juizl_meta ) && isset( $juizl_meta['code'] ) && empty($juizl_meta['code'][0] ) ) ) {
 		return;
 	}
 	
-	$links = apply_filters( 'juiz_lang_x_default', '<link rel="alternate" hreflang="x-default" href="'. get_the_permalink( $post->ID ) . '" />', $post );
+	/* if you ever wanna put you own link x-default */
+	$links = "\r\n" . '<!-- Juiz Lang Attributes BEGINS -->' . "\r\n";
+	$links .= apply_filters( 'juiz_lang_x_default', '', $post );
 
 	$i = 0;
 
@@ -29,6 +31,8 @@ function juiz_lang_wp_head() {
 		$links .= '<link rel="alternate" hreflang="' . ( isset( $juizl_meta['code'][$i] ) ? $juizl_meta['code'][$i] : '' ) . '" href="'. esc_url( $link ) . '" />';
 		$i++;
 	}
+
+	$links .= "\r\n" . '<!-- Juiz Lang Attributes ENDS -->' . "\r\n\r\n";
 
 	echo apply_filters( 'juiz_lang_wp_head', $links, $juizl_meta );
 
