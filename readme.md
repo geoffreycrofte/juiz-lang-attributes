@@ -4,8 +4,8 @@
 * **Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=P39NJPCWVXGDY&lc=FR&item_name=Juiz%20Lang%20Attributes2d%20WP%20Plugin&item_number=%23wp%2djla&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
 * **Tags:** lang, hreflang, alternate, attribute, SEO, accessibility, translation
 * **Requires at least:** WordPress 4.5
-* **Tested up to:** WordPress 5.1.1
-* **Stable tag:** 1.1.2
+* **Tested up to:** WordPress 5.4.1
+* **Stable tag:** 1.2.0
 
 Add a custom HREFLANG meta box on your post to manually edit the link between your post and a translation (which could be outside your domain). Also add the `lang` and `hreflang` attributes to the TinyMCE editor.
 
@@ -20,6 +20,13 @@ The Editor button to add `lang` and `hreflang` attributes on your content are he
 * You publish the same article in 2 languages on 2 different websites, (hreflang alternate links)
 * You use in your content a jargon from another language. (`lang` attribute)
 * You link from your post other posts in another language. (`hreflang` attribute)
+* Your Menus have some items not translated (`lang`attributes) or lead to page in another language (`hreflang`), you can edit those attributes in the Menus admin-menu. (**WordPress 5.4** compatibility)
+
+## Features available
+* Custom `hreflang` alternate links for posts (page, and custom posts)
+* Attributes `hreflang` and `lang` available and visible in the editor
+* Attributes `hreflang` and `lang` available on your main Menus items. (**WordPress 5.4** compatibility)
+
 
 ## You can donate to support
 
@@ -59,6 +66,7 @@ Thanks.
 1. Metabox for post
 2. TinyMCE with new buttons
 3. Attributes well placed on your HTML
+4. Attributes in the Appearance > Menus > Item link details
 
 ## Other plugins
 
@@ -68,6 +76,13 @@ Thanks.
 
 
 ## Changelog
+
+### 1.2.0
+* **Bug fix**
+  * Empty link tag on the header
+* **Features**
+  * Remove link x-default to avoid errors (better none than bad one)
+  * NEW: add hreflang and href to Menu Items
 
 ### 1.1.2
 * **Bug**: Fix JS Bug on TinyMCE Editor for both LANG and HREFLANG

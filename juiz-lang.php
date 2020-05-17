@@ -8,14 +8,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin URI: http://wordpress.org/extend/plugins/juiz-lang
  * Description: Add a custom HREFLANG meta box and 2 buttons on your editor to add <code>lang</code> and <code>hreflang</code> attributes on your post to manually edit the link between your post and a translation (which could be outside your domain).
  * Author: <a href="https://geoffrey.crofte.fr">Geoffrey Crofte</a>
- * Version: 1.1.2
+ * Version: 1.2.0
  * Author URI: https://geoffrey.crofte.fr
  * License: GPLv2 or later
  * Text Domain: juiz-lang
  */
 
 define( 'JUIZL_PLUGIN_NAME',   'Juiz Lang Attributes' );
-define( 'JUIZL_VERSION',       '1.1.2' );
+define( 'JUIZL_VERSION',       '1.2.0' );
 define( 'JUIZL_FILE',          __FILE__ );
 define( 'JUIZL_DIRNAME',       dirname( JUIZL_FILE ) );
 define( 'JUIZL_CLASSES_DIR',   JUIZL_DIRNAME . '/inc/classes/' );
