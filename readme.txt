@@ -3,8 +3,8 @@ Contributors: CreativeJuiz
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=P39NJPCWVXGDY&lc=FR&item_name=Juiz%20Lang%20Attributes2d%20WP%20Plugin&item_number=%23wp%2djla&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
 Tags: lang, hreflang, alternate, attribute, SEO, accessibility, translation
 Requires at least: 4.5
-Tested up to: 5.8.0
-Stable tag: 1.2.0
+Tested up to: 6.0.2
+Stable tag: 1.3.0
 
 Add a custom HREFLANG meta box on your post to manually edit the link between your post and a translation (which could be outside your domain). Also add the `lang` and `hreflang` attributes to the TinyMCE editor.
 
@@ -25,6 +25,9 @@ The Editor button to add `lang` and `hreflang` attributes on your content are he
 * Custom `hreflang` alternate links for posts (page, and custom posts)
 * Attributes `hreflang` and `lang` available and visible in the editor
 * Attributes `hreflang` and `lang` available on your main Menus items. (**WordPress 5.4** compatibility)
+
+## Know bugs, if you can help with code ;)
+* Gutenberg apply hreflang attribute on links, but never save it in database.
 
 **You can donate to support**
 
@@ -77,6 +80,12 @@ Thanks.
 
 
 == Changelog ==
+
+= 1.3.0 =
+* **Bug Fix**
+  * Styles wouldn't display on Gutenberg.
+* **Features**
+  * Unfortunately it's buggy: hreflang button available for links, but database wouldn't keep it saved.
 
 = 1.2.0 =
 * **Bug fix**

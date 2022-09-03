@@ -51,7 +51,8 @@ body#tinymce.wp-editor [lang]:after,
 	right: 0;
 }
 
-body#tinymce.wp-editor [hreflang]:before {
+body#tinymce.wp-editor [hreflang]:before,
+.editor-writing-flow [hreflang]:before {
 	content: 'H: ' attr(hreflang);
 	left: 0;
 }

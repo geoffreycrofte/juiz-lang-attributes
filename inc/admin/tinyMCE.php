@@ -22,7 +22,7 @@ add_filter( 'mce_buttons', 'juizl_register_buttons' );
  * @return (array)               The array with the new plugin.
  */
 function juizl_register_tinymce_javascript( $plugin_array ) {
-   $plugin_array['juizl'] = JUIZL_PLUGIN_URL . '/assets/js/juizl-tinymce-plugin.js';
+   $plugin_array['juizl'] = JUIZL_PLUGIN_URL . '/assets/js/juiz-lang-tinymce-plugin.js';
    return $plugin_array;
 }
 add_filter( 'mce_external_plugins', 'juizl_register_tinymce_javascript' );
@@ -34,7 +34,7 @@ add_filter( 'mce_external_plugins', 'juizl_register_tinymce_javascript' );
  * @return (string)          The new styles added.
  */
 function juizl_add_editor_styles( $mce_css ) {
-	$mce_css .= ', ' . JUIZL_PLUGIN_URL . 'assets/css/juizl-editor-style.css';
+	$mce_css .= ', ' . JUIZL_PLUGIN_URL . 'assets/css/juiz-lang-classic-editor.css';
     return $mce_css;
 }
 add_action( 'mce_css', 'juizl_add_editor_styles' );
