@@ -23,13 +23,13 @@ function juiz_lang_wp_head() {
 	
 	/* if you ever wanna put you own link x-default */
 	$links = "\r\n" . '<!-- Juiz Lang Attributes BEGINS -->' . "\r\n";
-	$xDefault = '<link rel="alternate" hreflang="x-default" href="'. esc_url( get_permalink( $post->ID ) ) . '" />';
+	$xDefault = '<link rel="alternate" hreflang="x-default" href="'. esc_url( get_permalink( $post->ID ) ) . '" />' . "\r\n";
 	$links .= apply_filters( 'juiz_lang_x_default', $xDefault, $post );
 
 	$i = 0;
 
 	foreach ( $juizl_meta['href'] as $link ) {
-		$links .= '<link rel="alternate" hreflang="' . ( isset( $juizl_meta['code'][$i] ) ? $juizl_meta['code'][$i] : '' ) . '" href="'. esc_url( $link ) . '" />';
+		$links .= '<link rel="alternate" hreflang="' . ( isset( $juizl_meta['code'][$i] ) ? $juizl_meta['code'][$i] : '' ) . '" href="'. esc_url( $link ) . '" />' . "\r\n";
 		$i++;
 	}
 
