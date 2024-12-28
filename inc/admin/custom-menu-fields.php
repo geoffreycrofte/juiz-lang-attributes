@@ -68,17 +68,17 @@ function juizl_edit_walker($item_id, $item, $depth, $arg, $id) {
 	$langattr     = isset( $item->langattr ) ? $item->langattr : '';
 ?>
 	<p class="field-hreflang field-langs description description-thin" style="margin-top:24px;margin-bottom: 24px;">
-		<label for="edit-menu-item-hreflang-<?php echo $item_id; ?>">
+		<label for="edit-menu-item-hreflang-<?php echo esc_attr( $item_id ); ?>">
 			<span class="edit-menu-label"><?php esc_html_e('Destination language', 'juizl-lang') ?></span><br />
-			<input type="text" id="edit-menu-item-hreflang-<?php echo $item_id; ?>" class="widefat code edit-menu-item-hreflang" name="menu-item-hreflang[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $hreflangattr ); ?>" />
+			<input type="text" id="edit-menu-item-hreflang-<?php echo esc_attr( $item_id ); ?>" class="widefat code edit-menu-item-hreflang" name="menu-item-hreflang[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $hreflangattr ); ?>" />
 			<span class="description"><?php esc_html_e( 'If the link leads to a page in a different language thant the current page’s one.', 'juiz-lang' ); ?> <a href="<?php esc_html_e('https://en.wikipedia.org/wiki/Hreflang#Language_and_Country_Codes', 'juizl-lang'); ?>" target="_blank"><?php esc_html_e('Documentation'); ?></a></span>
 		</label>
 	</p>
 
 	<p class="field-langattr field-langs description description-thin" style="margin-top:24px;margin-bottom: 24px;">
-		<label for="edit-menu-item-lang-<?php echo $item_id; ?>">
+		<label for="edit-menu-item-lang-<?php echo esc_attr( $item_id ); ?>">
 			<span class="edit-menu-label"><?php esc_html_e('Text language', 'juizl-lang') ?></span><br />
-			<input type="text" id="edit-menu-item-lang-<?php echo $item_id; ?>" class="widefat code edit-menu-item-langattr" name="menu-item-langattr[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $langattr ); ?>" />
+			<input type="text" id="edit-menu-item-lang-<?php echo esc_attr( $item_id ); ?>" class="widefat code edit-menu-item-langattr" name="menu-item-langattr[<?php echo esc_attr( $item_id ); ?>]" value="<?php echo esc_attr( $langattr ); ?>" />
 			<span class="description"><?php esc_html_e( 'If the text on the link is in a different language than the current page’s one.', 'juiz-lang' ); ?>  <a href="<?php esc_html_e('https://en.wikipedia.org/wiki/Hreflang#Language_and_Country_Codes', 'juizl-lang'); ?>" target="_blank"><?php esc_html_e('Documentation'); ?></a></span>
 		</label>
 	</p>

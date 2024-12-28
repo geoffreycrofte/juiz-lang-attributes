@@ -22,7 +22,9 @@ function juizl_enqueue_block_editor_assets() {
 		JUIZL_PLUGIN_URL . 'assets/js/juiz-lang-gutenberg-plugin.js',
 		array( 'wp-editor', 'wp-i18n', 'wp-element', 'wp-compose', 'wp-components' ),
 		JUIZL_VERSION,
-		true
+		array(
+			'in_footer' => true
+		)
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'juizl_enqueue_block_editor_assets', 9 );

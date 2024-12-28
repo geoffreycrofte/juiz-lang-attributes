@@ -4,15 +4,20 @@
 * **Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=P39NJPCWVXGDY&lc=FR&item_name=Juiz%20Lang%20Attributes2d%20WP%20Plugin&item_number=%23wp%2djla&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
 * **Tags:** lang, hreflang, alternate, attribute, SEO, accessibility, translation
 * **Requires at least:** WordPress 4.5
-* **Tested up to:** WordPress 6.0.2
-* **Stable tag:** 1.3.0
+* **Tested up to:** WordPress 6.7.1
+* **Stable tag:** 1.3.1
 
 Add a custom HREFLANG meta box on your post to manually edit the link between your post and a translation (which could be outside your domain). Also add the `lang` and `hreflang` attributes to the TinyMCE editor.
 
 ## Description
 
-To improve your SEO and the accessibility of your content, you are supposed to announce translations of your pages to Google to avoid duplicate content.
-The Editor button to add `lang` and `hreflang` attributes on your content are here to improve accessibility when screen readers are passing on words from different languages than your main language.
+To improve your SEO and the accessibility of your content, you must declare changes of language within your content.
+You must also declare translations of your pages to Google to avoid duplicate content.
+
+TinyMCE: For the people still in this old editor, buttons are available to add `lang` and `hreflang` attributes on your content, therefore to improve accessibility when screen readers are reading words from different languages than your main page language.
+
+Gutenberg: For Gutenberg users, WordPress already provide the "Language" menu. When selecting a text you can add a specific language. This plugin will enhance this behaviour with its own command, and by remembering the last language code you used.
+This plugin also comes with a hreflang option that you can put on links to tell users "this link lead to a French website" for example.
 
 ## Example of cases you need this plugin:
 
@@ -20,21 +25,21 @@ The Editor button to add `lang` and `hreflang` attributes on your content are he
 * You publish the same article in 2 languages on 2 different websites, (hreflang alternate links)
 * You use in your content a jargon from another language. (`lang` attribute)
 * You link from your post other posts in another language. (`hreflang` attribute)
-* Your Menus have some items not translated (`lang`attributes) or lead to page in another language (`hreflang`), you can edit those attributes in the Menus admin-menu. (**WordPress 5.4** compatibility)
+* Your Menus have some items not translated (`lang`attributes) or lead to page in another language (`hreflang`), you can edit those attributes in the Menus admin-menu. (**WordPress 5.4** compatibility) If you have a FSE (Full Site Editing) theme, I don't know how this will work for you, but you can use the Gutenberg commands this plugin put at your disposal.
 
 ## Features available
 * Custom `hreflang` alternate links for posts (page, and custom posts)
 * Attributes `hreflang` and `lang` available and visible in the editor
 * Attributes `hreflang` and `lang` available on your main Menus items. (**WordPress 5.4** compatibility)
 
-## Know bugs, if you can help with code ;)
-* Gutenberg apply hreflang attribute on links, but never save it in database.
+## Known bugs
+
+In old version of Gutenberg, the `hreflang` attribute on links is applied, but never save it in database. That is because `hreflang` is cleaned from WordPress posts. Indeed, it was not well recognized by the WordPress post sanitizing function.
 
 
 ## You can donate to support
 
 * [Donate what you want with Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=P39NJPCWVXGDY&lc=FR&item_name=Juiz%20Lang%20Attributes2d%20WP%20Plugin&item_number=%23wp%2djla&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
-* [Flattr this thing!](https://flattr.com/submit/auto?user_id=CreativeJuiz&url=http://wordpress.org/plugins/juiz-lang-attributes/&title=Juiz%20Lang%20Attributes-%20WordPress%20Plugin&description=Add%20lang%20and%20hreflang%20attributes%20to%20the%20editor%20to%20improve%20accessibility%20and%20SEO&tags=WordPress,Social,Share,Buttons,Network,Twitter,Facebook,Linkedin&category=software)
 
 
 ## Installation
@@ -58,11 +63,7 @@ You can use one of both method :
 ## Frequently Asked Questions
 
 * **My editor (classic editor) doesn't display the buttons. Why?**
-It happens sometimes when you alreay have another plugin that does dirty things with your editor. I can't control him anyway. Try to deactivate the dirty plugin to be sure it comes for it and see if the Juiz Lang Attributes buttons appear.
-
-* **My editor (Gutenberg) doesn't display the buttons. Why?**
-For the moment I don't support Gutenberg editor. Working on a way to support it.
-Thanks.
+It happens sometimes when you alreay have another plugin that does dirty things with your editor. I can't control it anyway. Try to deactivate the dirty plugin to be sure it comes for it and see if the Juiz Lang Attributes buttons appear.
 
 ## Screenshots
 
@@ -70,15 +71,23 @@ Thanks.
 2. TinyMCE with new buttons
 3. Attributes well placed on your HTML
 4. Attributes in the Appearance > Menus > Item link details
+5. Gutenberg options
 
 ## Other plugins
 
 * **<a href="http://wordpress.org/plugins/juiz-social-post-sharer/">Juiz Social Post Sharer</a>**: if you need social buttons.
 * **<a href="https://fr.wordpress.org/plugins/juiz-outdated-post-message/">Juiz Outdated Post Message</a>**: if you want to put a warning on old post on your blog.
 * **<a href="https://wordpress.org/plugins/embed-can-i-use/">Embed Can I Use</a>**: if you talk about support of HTML 5, CSS3 or JS API, you need to embed Can I Use support tables.
+* **<a href="https://wordpress.org/plugins/social-integration-for-bluesky/">Social integration for BlueSky</a>**: Add a Profile Banner, a list of your recent BlueSky Posts, or an auto syndication on BlueSky with this plugin.
 
 
 ## Changelog
+
+### 1.3.1
+* **Bug Fix**
+  * Hreflang attributes are now saved on links with Gutenberg
+* Tested on WordPress 6.7.1
+* Adds the `alternate` named `x-default` to your head section when using the `hreflang` alternative URL metabox.
 
 ### 1.3.0
 * **Bug Fix**

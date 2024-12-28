@@ -23,7 +23,8 @@ function juiz_lang_wp_head() {
 	
 	/* if you ever wanna put you own link x-default */
 	$links = "\r\n" . '<!-- Juiz Lang Attributes BEGINS -->' . "\r\n";
-	$links .= apply_filters( 'juiz_lang_x_default', '', $post );
+	$xDefault = '<link rel="alternate" hreflang="x-default" href="'. esc_url( get_permalink( $post->ID ) ) . '" />';
+	$links .= apply_filters( 'juiz_lang_x_default', $xDefault, $post );
 
 	$i = 0;
 
